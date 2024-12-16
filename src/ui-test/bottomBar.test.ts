@@ -177,11 +177,11 @@ describe('Bottom Bar Example Tests', function () {
 
 		it('Execute a command', async function () {
 			const delimiter = process.platform === 'win32' ? '\r\n' : '\n';
-			await view.executeCommand('echo "hello world"', 2_000);
+			await view.executeCommand('echo hello', 2_000);
 
 			// now there should be a line saying 'hello world!' in the terminal
 			const text = await view.getText();
-			const textFound = text.split(delimiter).some((line) => line === 'hello world');
+			const textFound = text.split(delimiter).some((line) => line === 'hello');
 
 			expect(textFound).is.true;
 		});
