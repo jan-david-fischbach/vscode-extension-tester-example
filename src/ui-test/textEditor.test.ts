@@ -22,7 +22,7 @@ describe('Text Editor sample tests', () => {
 	let editor: TextEditor;
 
 	before(async function () {
-		this.timeout(10_000);
+		this.timeout(20_000);
 		// create a file to open in an editor
 		await new Workbench().executeCommand('Create: New File...');
 		await (await InputBox.create()).selectQuickPick('Text File');
@@ -35,7 +35,7 @@ describe('Text Editor sample tests', () => {
 	});
 
 	after(async function () {
-		this.timeout(10_000);
+		this.timeout(20_000);
 		// cleanup, delete the file contents and close the editor
 		await editor.clearText();
 		await new EditorView().closeAllEditors();

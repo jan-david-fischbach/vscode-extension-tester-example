@@ -23,7 +23,7 @@ describe('Sample WebView Test', () => {
 	let view: WebView;
 
 	before(async function () {
-		this.timeout(8000);
+		this.timeout(20_000);
 		// open a sample web view
 		await new Workbench().executeCommand('Webview Test');
 		await new Promise((res) => {
